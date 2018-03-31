@@ -14,6 +14,7 @@ var intro = require('./routes/intro');
 var neww = require('./routes/new');
 var hot = require('./routes/hot');
 var post = require('./routes/post');
+var like = require('./routes/like');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -42,6 +43,7 @@ app.get('/intro', intro.view);
 app.get('/new', neww.view);
 app.get('/hot', hot.view);
 app.get('/post', post.post);
+app.get('/like', like.like);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

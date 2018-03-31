@@ -6,10 +6,28 @@
 </head>
 <body>
 
+<<<<<<< HEAD
 <div class="wrapper">
 	<button class="button"> <a href="new">Newest</a></button>
 	<button class="button">Hottest</button>
 </div>
+=======
+<div>
+	<button> <a href="new">Newest</a></button>
+	<button>Hottest</button>
+</div>
+
+{{#each posts}}
+<div>
+        <h3>{{content}}</h3>
+        <form action="/like">
+                <input name="like" value="{{content}}" hidden></input>
+		<input name="page" value="hot" hidden></input>
+                <input type="submit" value="Like {{likes}}"></input>
+        </form>
+</div>
+{{/each}}
+>>>>>>> 536c965ad2eecbad056221e73f76393d121a8a70
 
 <form align="middle" action="/post">
 	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M6 34.5V42h7.5l22.13-22.13-7.5-7.5L6 34.5zm35.41-20.41c.78-.78.78-2.05 0-2.83l-4.67-4.67c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"/></svg>
