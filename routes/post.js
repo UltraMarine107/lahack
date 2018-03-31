@@ -4,7 +4,7 @@ exports.post = function(req, res){
 	var time = new Date();
 	console.log(neww.posts.length);
 
-	var post = {"content": req.query.post};
+	var post = {"content": req.query.post, "likes": 0};
 	var newArray = [];
 	newArray.push(post)
 
@@ -13,7 +13,7 @@ exports.post = function(req, res){
 		newArray.push(neww.posts[i]);
 		count++;
 	
-		if (count == 2)
+		if (count == 2) //TODO Change to 9 at some point
 			break;
 	}
 	neww.posts = newArray;

@@ -5,8 +5,21 @@
 </head>
 <body>
 
-<button> <a href="new">Newest</a></button>
-<button>Hottest</button>
+<div>
+	<button> <a href="new">Newest</a></button>
+	<button>Hottest</button>
+</div>
+
+{{#each posts}}
+<div>
+        <h3>{{content}}</h3>
+        <form action="/like">
+                <input name="like" value="{{content}}" hidden></input>
+		<input name="page" value="hot" hidden></input>
+                <input type="submit" value="Like {{likes}}"></input>
+        </form>
+</div>
+{{/each}}
 
 <form action="/post">
 	<input name="post" placeholder="Post Your Own Wish Here"></input>
