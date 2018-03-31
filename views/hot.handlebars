@@ -1,32 +1,46 @@
 <!doctype html>
 
-<html>
+<html style="height:100%; width:100%">
 <head>
-	<link href="/css/hottest.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="/css/introHCI.css" rel="stylesheet">
+        <link href="/css/colorGrid.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body style="height: 100%; width: 100%">
 
-<div class="wrapper">
-	<button class="button"> <a href="new">Newest</a></button>
-	<button class="button">Hottest</button>
+<center><h1 style="font:Garamond">Before I die, I want to ...</h1></center>
+
+<div>
+	<button><a href="new"><h4>Newest</h4></a></button>
+	<button><h4>Hottest</h4></button>
 </div>
 
+<div class="flex-container">
 {{#each posts}}
-<div>
-        <h3>{{content}}</h3>
-        <form action="/like">
-                <input name="like" value="{{content}}" hidden></input>
-		<input name="page" value="hot" hidden></input>
-                <input type="submit" value="Like {{likes}}"></input>
-        </form>
+<div id="grid" style="background-color: {{color}}">
+	<h3 style="color:white">{{content}}</h3>
+	<form action="/like">
+		<input name="like" value="{{content}}" hidden></input>
+		<input name="page" value="new" hidden></input>
+		<input id="img"  type="image" alt="submit" src="img/like.ico">
+		<p style="float:right; font-size:16pt; color:white">
+			{{likes}}</p>
+		</input>
+	</form>
 </div>
 {{/each}}
+</div>
 
-<form align="middle" action="/post">
-	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M6 34.5V42h7.5l22.13-22.13-7.5-7.5L6 34.5zm35.41-20.41c.78-.78.78-2.05 0-2.83l-4.67-4.67c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"/></svg>
-	<input align="middle" name="post" placeholder="Post Your Own Wish Here"></input>
-	<input align="middle" type="submit" value="Post"></input>
+<br>
+
+<div style="height:20%; width:100%;">
+<form action="/post">
+        <input id="qrBox" name="post" placeholder="Post Your Own Wish Here (Maximum 140 Characters)"></input>
+        <input id="qrButton" type="submit" value="Post"></input>
 </form>
-
+</div>
 </body>
 </html>

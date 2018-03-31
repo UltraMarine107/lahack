@@ -2,9 +2,23 @@ var neww = require('../new.json');
 
 exports.post = function(req, res){
 	var time = new Date();
-	console.log(neww.posts.length);
+	var rand = Math.random();
+	var color = "";
 
-	var post = {"content": req.query.post, "likes": 0};
+	if (rand > 0.5)
+		color = "#00a1f1";
+	else
+		color = "blue";
+
+	var content = req.query.post;
+
+	if (content == "")
+		return res.redirect("new");
+
+	if (content.length > 140)
+		content = content.substring(0, 140);
+
+	var post = {"content": content, "likes": 0, 'color': color};
 	var newArray = [];
 	newArray.push(post)
 
@@ -13,11 +27,10 @@ exports.post = function(req, res){
 		newArray.push(neww.posts[i]);
 		count++;
 	
-		if (count == 2) //TODO Change to 9 at some point
+		if (count == 11)
 			break;
 	}
 	neww.posts = newArray;
 
-	console.log(neww);
 	return res.redirect('/new');
 }

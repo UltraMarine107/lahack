@@ -43,15 +43,25 @@ exports.like = function(req, res){
 		}
 	}
 
-	if (!onHot){ //TODO Change max posts from 3 to 10
-		newHot = {"content": content, "likes": neww.posts[j].likes};
+	if (!onHot){ 
+		var color = ""
+		var rand = Math.random();
+		
+	        if (rand > 0.5)
+        	        color = "#00a1f1";
+        	else
+                	color = "blue";
 
-		if (hot.posts.length < 3){ //TODO Put newest on top
+		var newHot = {"content": content, 
+				"likes": neww.posts[j].likes,
+				"color": color};
+
+		if (hot.posts.length < 12){ //TODO Put newest on top
 			hot.posts.push(newHot);
 		}
-		else if (hot.posts[2].likes == neww.posts[j].likes){
+		else if (hot.posts[11].likes == neww.posts[j].likes){
                         var newArray = [];
-                        for (var i = 0; i < 2; i++){
+                        for (var i = 0; i < 11; i++){
                                 newArray.push(hot.posts[i]);
 			}
                         newArray.push(newHot);
