@@ -1,0 +1,156 @@
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+body 
+{
+	margin: 0;
+	padding: 0;
+	//background: url(/images/motif2.png);
+	background-size: cover;
+	font-family: sans-serif;
+	background: url(/images/calendarBackground1.jpg);
+}
+.title
+{
+	text-align:center;
+	padding:50px 0 20px;
+
+}
+.title h1{
+	margin: 0;
+	padding: 0;
+	//color: #80ffe5;
+	color:#fff;
+	font-size: 40px;
+	font-family: Charcoal;
+ }
+
+
+.quotes{
+	margin:0 auto;
+	padding:0;
+	color:#fff;
+	font-size: 16px;
+	font-family: Comic Sans MS;
+	font-style: italic;
+	line-height:6px;
+	position: center;
+}
+
+.container{
+	width: 90%;
+	height: 70%;
+	background: #fff;
+	margin:0 auto;
+	border: 2px solid #fff;
+	box-shadow: 0 20px 50px rgba(0,0,0,.5);
+	opacity:0.9;
+	box-sizing:border-box;
+}
+.formBox
+{
+	width:100%;
+	padding: 80px 40px;
+	border-box;
+	box-sizing: border-box;
+	height: 600px;
+	background: #fff;
+	font-size: 30px;
+}
+.formBox p
+{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	//color: #80ffe5;
+	color: #00a1f1;
+}
+.formBox input
+{
+	width:100%;
+	margin-bottom: 20px;
+
+}
+.formBox input[type="Name"],
+.formBox input[type="password"]
+{
+	border: none;
+	border-bottom: 4px solid #00a1f1;
+	outline:none;
+	height: 50px;
+	font-size: 20px;
+}
+.formBox input[type="Name"]:focus,
+.formBox input[type="Password"]:focus{
+	font-size: 10px;
+}
+
+{
+	border-bottom: 4px solid #00cca3;
+}
+.formBox input[type= "submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	background: #00a1f1;
+	cursor: pointer;
+	font-size: 30px;
+}
+.formBox input[type= "submit"]:hover
+{
+	background: #00cca3;
+
+}
+.formBox a 
+{
+	color: #00a1f1;
+	font-size: 10px;
+	font-weight:bold;
+}
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+}
+.fa:hover {
+    opacity: 0.7;
+}
+/*
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 60%;
+     position:relative;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius:60%;
+     position:relative;
+}
+.fa-google-plus-circle {
+	
+    width:20px;
+    background: black;
+    color: white;
+    border-radius:60%;
+     position:relative;
+}
+.fa-home{
+	color: #00cca3;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}*/
+.container h2{
+	margin: 0;
+	padding: 0;
+	color: #00a1f1;
+	font-size: 15px;
+	text-align: center;
+}

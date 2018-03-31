@@ -1,0 +1,150 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+/* body {
+     margin-top: 120px;
+     margin-bottom: 120px;
+     margin-left: 600px;
+     margin-right: 600px;
+}
+.container { 
+     justify-content: center;
+     align-items: center;
+     position: 100%         
+}
+
+.title {
+     position: center;
+}
+
+h1 {
+     color: black;
+     font-family: 'Raleway, sens-sirf';
+}
+)
+
+*/
+.jumbotron {
+	position: relative; 
+	background: none;
+}
+.jumbotron:after {
+     content:"";
+     background: url("../images/lorempixel.jumbotron.jpeg");
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: 0;	
+}
+.jumbotron p {
+     color: #6e6e6e;
+}
+.project a {
+     text-align: center;
+}
+*/
+
+.bell {
+     position: right;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button20 {
+    font-size: 24px; 
+    background-color: pink; 
+    color: black; 
+    border: 2px solid #FFB6C1;
+}
+
+.button20:hover {
+     background-color: #FFFFFF;
+     color: pink;
+}
+
+.button10 {
+    font-size: 24px; 
+    background-color: firebrick; 
+    color: black; 
+    border: 2px solid #990000;
+}
+
+.button10:hover {
+     background-color: #FFFFFF;
+     color: firebrick;
+}
+
+.button30 {
+    font-size: 24px; 
+    background-color: pink; 
+    color: black; 
+    border: 2px solid #FFB6C1;
+}
+
+.button30:hover {
+     background-color: #FFFFFF;
+     color: pink;
+}
+
+/* create event button */ 
+.button1 {
+    font-size: 24px; 
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* reminder button */
+.button2 {
+    font-size: 24px;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* calendar button */
+.button3 {
+    font-size: 24px; 
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button3:hover {
+    background-color: #4CAF50;
+    color: white;
+}
