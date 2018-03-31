@@ -4,7 +4,21 @@
 <head>
 </head>
 <body>
-<button>Newest</button>
-<button><a href="hot">Hottest</a></button>
+<div>
+	<button>Newest</button>
+	<button><a href="hot">Hottest</a></button>
+</div>
+
+{{#each posts}}
+<div>
+	<h3>{{content}}</h3>
+</div>
+{{/each}}
+
+<form action="/post">
+        <input name="post" placeholder="Post Your Own Wish Here"></input>
+        <input type="submit" value="Post"></input>
+</form>
+
 </body>
 </html>
