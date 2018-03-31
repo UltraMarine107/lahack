@@ -2,15 +2,19 @@
 
 <html>
 <head>
+	<link href="/css/hottest.css" rel="stylesheet">
 </head>
 <body>
 
-<button> <a href="new">Newest</a></button>
-<button>Hottest</button>
+<div class="wrapper">
+	<button class="button"> <a href="new">Newest</a></button>
+	<button class="button">Hottest</button>
+</div>
 
-<form action="/post">
-	<input name="post" placeholder="Post Your Own Wish Here"></input>
-	<input type="submit" value="Post"></input>
+<form align="middle" action="/post">
+	<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48"><path d="M6 34.5V42h7.5l22.13-22.13-7.5-7.5L6 34.5zm35.41-20.41c.78-.78.78-2.05 0-2.83l-4.67-4.67c-.78-.78-2.05-.78-2.83 0l-3.66 3.66 7.5 7.5 3.66-3.66z"/></svg>
+	<input align="middle" name="post" placeholder="Post Your Own Wish Here"></input>
+	<input align="middle" type="submit" value="Post"></input>
 </form>
 </body>
 </html>
