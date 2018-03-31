@@ -44,14 +44,17 @@ exports.like = function(req, res){
 	}
 
 	if (!onHot){ //TODO Change max posts from 3 to 10
+		newHot = {"content": content, "likes": neww.posts[j].likes};
+
 		if (hot.posts.length < 3){ //TODO Put newest on top
-			hot.posts.push(neww.posts[j]);
+			hot.posts.push(newHot);
 		}
-		else if (hot.posts[2].likes == 1){
+		else if (hot.posts[2].likes == neww.posts[j].likes){
                         var newArray = [];
-                        for (var i = 0; i < 2; i++)
+                        for (var i = 0; i < 2; i++){
                                 newArray.push(hot.posts[i]);
-                        newArray.push(neww.posts[j]);
+			}
+                        newArray.push(newHot);
                         hot.posts = newArray;
 		}
 	}
