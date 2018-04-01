@@ -18,7 +18,8 @@ exports.post = function(req, res){
 	if (content.length > 140)
 		content = content.substring(0, 140);
 
-	var post = {"content": content, "likes": 0, 'color': color};
+	var post = {"content": content, "likes": 0, 
+			'color': color, "likedby": []};
 	var newArray = [];
 	newArray.push(post)
 

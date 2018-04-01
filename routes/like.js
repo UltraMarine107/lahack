@@ -1,13 +1,31 @@
 var neww = require('../new.json');
 var hot = require('../hot.json');
 
+function cookie_check(cookie, likedby){
+	for (var i = 0; i < likedby.length; i++){
+                if (cookie === likedby[i]){
+                        return true;
+                }
+        }
+	return false;
+}
+
 exports.like = function(req, res){
 	var content = req.query.like;
 	var num_like = 0;
+	var cookie = req.cookies.cookieName;
+	var page = req.query.page;
+	console.log(cookie);
 
 	var onHot = false;
 	for (var i = 0; i < hot.posts.length; i++){
 		if (hot.posts[i].content === content){
+			console.log(hot.posts[i].likedby);
+			if (cookie_check(cookie, hot.posts[i].likedby))
+				return res.redirect(page);
+			else
+				hot.posts[i].likedby.push(cookie);
+
 			hot.posts[i].likes += 1;
 			onHot = true;
 			
@@ -38,6 +56,11 @@ exports.like = function(req, res){
 	var j;
 	for (j = 0; j < neww.posts.length; j++){
 		if (neww.posts[j].content === content){
+			if(cookie_check(cookie, neww.posts[j].likedby))
+				return res.redirect(page);
+			else
+				neww.posts[j].likedby.push(cookie);
+
 			neww.posts[j].likes += 1;
 			break;
 		}
@@ -54,7 +77,8 @@ exports.like = function(req, res){
 
 		var newHot = {"content": content, 
 				"likes": neww.posts[j].likes,
-				"color": color};
+				"color": color,
+				"likedby": neww.posts[j].likedby};
 
 		if (hot.posts.length < 12){ //TODO Put newest on top
 			hot.posts.push(newHot);
@@ -69,5 +93,5 @@ exports.like = function(req, res){
 		}
 	}
 
-	return res.redirect(req.query.page);
+	return res.redirect(page);
 }
