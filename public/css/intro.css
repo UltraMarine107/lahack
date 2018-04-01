@@ -8,24 +8,6 @@ body{
 	background-color: #fff;
 
 }
-/*.back {
-	background:url("/css/Before I die.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;
-	height: 800px;
-	z-index: 1
-}
-
-
-.top {
-	height:800px; background-color:#ffffff;filter:Alpha(Opacity=0);opacity:0.6;
-	z-index: 2
-}
-*/
 
 img.bg {
     min-height: 100%;
@@ -50,7 +32,7 @@ img.mengban{
 }
 
 .bottom{
-	opacity:0.7;
+	opacity:0.5;
 }
 
 .title{
