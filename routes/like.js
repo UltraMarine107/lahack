@@ -23,9 +23,8 @@ exports.like = function(req, res){
 			console.log(hot.posts[i].likedby);
 			if (cookie_check(cookie, hot.posts[i].likedby))
 				return res.redirect(page);
-			else
-				hot.posts[i].likedby.push(cookie);
 
+			hot.posts[i].likedby.push(cookie);
 			hot.posts[i].likes += 1;
 			onHot = true;
 			
@@ -58,8 +57,8 @@ exports.like = function(req, res){
 		if (neww.posts[j].content === content){
 			if(cookie_check(cookie, neww.posts[j].likedby))
 				return res.redirect(page);
-			else
-				neww.posts[j].likedby.push(cookie);
+			
+			neww.posts[j].likedby.push(cookie);
 
 			neww.posts[j].likes += 1;
 			break;
